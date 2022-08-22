@@ -1,15 +1,13 @@
 #pragma once
 
-class Complex; //forward declartion
-//works only with pointers and references
-//if you create objects then include header file!
-//#include"complex.h"
+class Cstring;
+
 class SmartPointer
 {
-	Complex* cptr;
+	Cstring* sptr;
 public: SmartPointer();
-	  SmartPointer(int, int);
-	  Complex* operator -> ();
-	  Complex& operator * ();
+	  SmartPointer(const char*);
+	  Cstring* operator ->();
+	  Cstring& operator *();
 	  ~SmartPointer();
 };
